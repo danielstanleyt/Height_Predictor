@@ -29,10 +29,14 @@ global_food = pd.read_csv("/content/drive/MyDrive/Data/global-food.csv")
 global_food.head()
 
 """combine data"""
+#ALL COMBINED DATA SETP WAS UNUSED FOR RESEARCH PURPOSE
 
 combined_data = pd.merge(country_height, gdp_constant, left_on="Country", right_on="Country Name")
 combined_data.head()
 len(combined_data)
+
+
+
 #combined.iloc[10000]
 #len(combined) #to see how many data sets
 #life_expectancy= pd.read_csv("/content/drive/MyDrive/Data/Life expectancy.csv")
@@ -43,9 +47,8 @@ len(combined_data)
 
 
 """plot data"""
-
+#To Analysis Data set
 plt.scatter(x="2020 [2020]" ,y="Mean height",data=combined_data[combined_data["Sex"]=="Boys"])
-
 plt.scatter(x="Year" ,y="Mean height",s=10,data=combined_data)
 plt.xlabel("Year")
 plt.ylabel("Mean height")
